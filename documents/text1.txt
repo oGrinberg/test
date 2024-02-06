@@ -1,0 +1,101 @@
+Skip to content
+logo
+k3d
+v5.4.2
+Overview
+
+Search
+
+ k3d-io/k3d
+v5.6.04.9k444
+Overview
+ 
+Guides
+ 
+Design
+ 
+FAQ
+Overview
+Table of contents
+What is k3d?
+Learning
+Requirements
+Releases
+Installation
+Install Script
+Install current latest release
+Install specific release
+Other Installers
+Quick Start
+Connect
+Related Projects
+Overview¶
+k3d
+
+What is k3d?¶
+k3d is a lightweight wrapper to run k3s (Rancher Lab’s minimal Kubernetes distribution) in docker.
+
+k3d makes it very easy to create single- and multi-node k3s clusters in docker, e.g. for local development on Kubernetes.
+
+Note: k3d is a community-driven project, that is supported by Rancher (SUSE) and it’s not an official Rancher (SUSE) product.
+
+View a quick demo
+Learning¶
+k3d demo repository: iwilltry42/k3d-demo
+
+Featured use-cases include:
+
+hot-reloading of code when developing on k3d (Python Flask App)
+build-deploy-test cycle using Tilt
+full cluster lifecycle for simple and multi-server clusters
+Proof of Concept of using k3d as a service in Drone CI
+Rancher Meetup - May 2020 - Simplifying Your Cloud-Native Development Workflow With K3s, K3c and K3d (YouTube)
+Requirements¶
+docker to be able to use k3d at all
+Note: k3d v5.x.x requires at least Docker v20.10.5 (runc >= v1.0.0-rc93) to work properly (see #807)
+kubectl to interact with the Kubernetes cluster
+Releases¶
+Platform	Stage	Version	Release Date	Downloads so far
+GitHub Releases	stable	GitHub release (latest by date)	GitHub Release Date	GitHub Release Downloads
+GitHub Releases	latest	GitHub release (latest by date including pre-releases)	GitHub (Pre-)Release Date	GitHub Release Downloads (incl. Pre-Releases)
+Homebrew	stable	homebrew	-	-
+Chocolatey	stable	chocolatey	-	-
+Installation¶
+You have several options there:
+
+ Install Script¶
+Install current latest release¶
+wget: `#!bash wget -q -O - https://raw.githubusercontent.com/k3d-io/k3d/main/install.sh | bash`
+curl: `#!bash curl -s https://raw.githubusercontent.com/k3d-io/k3d/main/install.sh | bash`
+Install specific release¶
+Use the install script to grab a specific release (via TAG environment variable):
+
+wget: `#!bash wget -q -O - https://raw.githubusercontent.com/k3d-io/k3d/main/install.sh | TAG=v5.0.0 bash`
+curl: `#!bash curl -s https://raw.githubusercontent.com/k3d-io/k3d/main/install.sh | TAG=v5.0.0 bash`
+Other Installers¶
+Other Installation Methods
+Quick Start¶
+Create a cluster named mycluster with just a single server node:
+
+bash k3d cluster create mycluster
+
+Use the new cluster with kubectl, e.g.:
+
+bash kubectl get nodes
+
+Getting the cluster’s kubeconfig (included in k3d cluster create)
+Connect¶
+Join the Rancher community on slack via slack.rancher.io
+Go to rancher-users.slack.com and join our channel #k3d
+Start chatting
+Related Projects¶
+vscode-k3d: VSCode Extension to handle k3d clusters from within VSCode
+k3x: a graphics interface (for Linux) to k3d.
+AbsaOSS/k3d-action: fully customizable GitHub Action to run lightweight Kubernetes clusters.
+AutoK3s: a lightweight tool to help run K3s everywhere including k3d provider.
+nolar/setup-k3d-k3s: setup K3d/K3s for GitHub Actions.
+Last update: March 15, 2022
+ Back to top
+NextUsing Config Files
+Copyright © 2020-2022 k3d Authors
+Made with Material for MkDocs

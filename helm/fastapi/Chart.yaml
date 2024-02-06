@@ -1,0 +1,7 @@
+apiVersion: v2
+name: fastapi
+description: A Helm chart for the fastapi component.
+
+type: application
+version: 0.0.0
+appVersion: 0.0.0
